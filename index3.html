@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        //jsnack 3
+        //Creiamo una copia dell'array di partenza e aggiungiamo ai singoli elementi una nuova proprietà position 
+        //che contiene una lettera casuale. non dobbiamo modificare l'array iniziale
+        //Usiamo arrow function, map e...
+
+        const arrayObj = [
+            {name: 'Poppy', type: 'tshirt', color: 'red'},
+            {name: 'Jumping', type: 'occhiali', color: 'blue'},
+            {name: 'CrissCross', type: 'scarpe', color: 'black'},
+            {name: 'Jenny', type: 'borsa', color: 'pink'},
+        ];
+
+        const randomNumber = (min, max) => {
+
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };          
+
+        const generatePosition = () => {     
+
+            const letters = 'abcdefghijklmnopqrstuvwxyz';
+            const letter = letters[randomNumber(0, letters.length -1)];
+
+            console.log('lettera generata', letter);
+
+            return letter;
+        };
+
+        //map e operatore spread
+        const newArrayObj = arrayObj.map((element) =>{
+
+            const copyElement = {
+                ...element,
+                position: generatePosition()
+            };
+
+            return copyElement;
+        })
+
+        console.log('array di partenza', arrayObj);
+        console.log('nuovo array', newArrayObj);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script type="text/javascript">
+
+        //jsnack 1
+        //Creare un array di oggetti: 
+        //Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso. 
+        //Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
+
+        const bici = [
+            {
+                name: 'Pinarello',
+                peso: 10
+            },
+            {
+                name: 'Bianchi',
+                peso: 8
+            },
+            {
+                name: 'Scott',
+                peso: 11
+            }
+        ];
+
+        let biciLeggera = bici[0];
+
+        //possiamo usare for
+        // for (let i = 0; i < bici.length; i++) {
+        //   if (bici[i].peso < biciLeggera.peso) {
+        //     biciLeggera = bici[i];
+        //   }
+        // }
+
+
+        //o foreach
+        bici.forEach((element) => {
+
+            console.log('bicicletta attuale', element);
+
+            if(element.peso < biciLeggera.peso) {
+                biciLeggera = element;
+            }
+        });
+
+        console.log(biciLeggera);
+
+        //stampiamo a schermo il risultato
+        const {peso, name} = biciLeggera;
+        
+        document.getElementById('container').innerHTML = 
+        `<ul>
+            <li>Nome: ${name}</li>
+            <li>Peso: ${peso}</li>
+        </ul>`;
+
+    </script>
+    
+</body>
+</html>

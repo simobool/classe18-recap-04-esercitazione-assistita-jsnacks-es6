@@ -1,0 +1,8 @@
+//SVOLGETE DA SOLI O IN GRUPPO QUESTO ESERCIZIO. ALLE 16:10 VEDIAMO INSIEME LA SOLUZIONE.
+//FATE DOMANDE A VOCE ALTA SE VI SERVE :) CI SIAMO!
+
+//jsnack 2
+//Partendo da un array creiamone uno nuovo con solo i valori che hanno la posizione compresa tra i due numeri 
+// inseriti dall'utente
+
+// usiamo i nuovi metodi degli array foreach o filter

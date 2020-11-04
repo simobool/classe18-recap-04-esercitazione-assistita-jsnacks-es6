@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        //jsnack 2
+        //Partendo da un array creiamone uno nuovo con solo i valori che hanno la posizione compresa 
+        // tra i due numeri inseriti dall'utente
+
+        // usiamo i nuovi metodi degli array foreach o filter
+
+        const myArray = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
+        
+        const min = parseInt(prompt('Inserisci un numero compreso tra 0 e 5'));
+        const max = parseInt(prompt('Inserisci un numero compreso tra 0 e 5'));
+
+        //con foreach
+        const newArray = [];
+        
+        myArray.forEach((element, index) => {
+
+            if (min <= index && max >= index) {
+                newArray.push(element);
+            }
+
+        });
+
+        // con filter
+        const newArrayFilter = myArray.filter((element, index) => {
+            
+            return min <= index && max >= index;
+        });
+
+        console.log('array di partenza', myArray);
+        console.log('nuovo array con foreach', newArray);
+        console.log('nuovo array con filter', newArrayFilter);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
